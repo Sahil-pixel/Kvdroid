@@ -286,7 +286,7 @@ if platform == "android":
 
     def share_file(path, title='Share', chooser=True, app_package=None, call_playstore=True, error_msg=""):
         path = str(path)
-        if VERSION_CODES.SDK_INT>=24:
+        if VERSION.SDK_INT>=24:
             StrictMode.disableDeathOnFileUriExposure()
         shareIntent = Intent(Intent.ACTION_SEND)
         shareIntent.setType("*/*")
